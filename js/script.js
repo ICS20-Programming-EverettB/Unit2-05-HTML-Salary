@@ -15,11 +15,11 @@ function calculate () {
   // process
   let yourtotalpay =  hoursWorked*hourlyRate 
   // output
-  document.getElementById('let yourpay').innerHTML = 'Your pay is: '+ $ + yourTotalPay
-  let netincome= yourTotalPay-taxses
+  document.getElementById('your-pay').innerHTML = 'Your pay is: '+ $ + yourTotalPay
+  let netincome = yourTotalPay-taxses
   // process
   let taxses =  yourPay*TAXRATE
   // output
-  document.getElementById('let taxses').innerHTML = 'The govorment will take: '+ $ + taxses
+  document.getElementById('taxses').innerHTML = 'The govorment will take: '+ $ + taxses
 
 
