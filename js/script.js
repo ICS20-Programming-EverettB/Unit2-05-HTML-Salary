@@ -9,17 +9,16 @@
 const TAXRATE= 0.2005
 function calculate () {
   // input
-  let hoursWorked = parseFloat(document.getElementById('Hours-worked').value);
+  let hoursWorked = parseFloat(document.getElementById('hours-worked').value);
   let hourlyRate = parseFloat(document.getElementById('hourly-rate').value);
 
   // process
-  let yourtotalpay =  hoursWorked*hourlyRate 
+  let yourTotalPay =  hoursWorked * hourlyRate
+  let taxes =  yourTotalPay*TAXRATE
+  let netIncome = yourTotalPay - taxes
+  
   // output
-  document.getElementById('your-pay').innerHTML = 'Your pay is: '+ $ + yourTotalPay
-  let netincome = yourTotalPay-taxses
-  // process
-  let taxses =  yourPay*TAXRATE
-  // output
-  document.getElementById('taxses').innerHTML = 'The govorment will take: '+ $ + taxses
+  document.getElementById('your-pay').innerHTML = 'Your net pay is: $' + netIncome.toFixed(2)
+  document.getElementById('taxes').innerHTML = 'The government will take: $' + taxes.toFixed(2)
 
-
+}
